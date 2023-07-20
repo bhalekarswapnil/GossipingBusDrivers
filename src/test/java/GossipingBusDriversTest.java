@@ -11,7 +11,7 @@ public class GossipingBusDriversTest {
                 {2, 1, 2},
                 {5, 2, 8}
         };
-        int expectedOutput = -1; // never
+        int expectedOutput = -1; // never gossips
         assertEquals(expectedOutput, GossipingBusDrivers.getNumberStopsForSharingAllGosips(driverRoutes));
     }
 
@@ -34,7 +34,7 @@ public class GossipingBusDriversTest {
                 {3,2,3,1},
                 {4, 2,3,4,5 },
         };
-        int expectedOutput = 5; // All drivers meet at stop 12, so all gossips in 12 stops
+        int expectedOutput = 5; 
         assertEquals(expectedOutput, GossipingBusDrivers.getNumberStopsForSharingAllGosips(driverRoutes));
     }
 }
