@@ -18,4 +18,9 @@ public class Driver {
         return routes[minute < size ? minute : minute % size];
     }
 
+    public Set<Integer> getGossips(){
+        return  this.gossips;
+    }
+
+
 }

@@ -37,4 +37,15 @@ public class GossipingBusDriversTest {
         int expectedOutput = 5; 
         assertEquals(expectedOutput, GossipingBusDrivers.getNumberStopsForSharingAllGosips(driverRoutes));
     }
+
+    @Test
+    void testDriversHaveAllGossipsAtStart() {
+        int[][] driverRoutes = { { 1, 2, 3 }, { 3, 1, 2 }, { 2, 3, 1 } };
+        assertEquals(1, GossipingBusDrivers.getNumberStopsForSharingAllGosips(driverRoutes));
+    }
+    @Test
+    void testLargeNumberOfMinutes() {
+        int[][] routes = { { 1, 2, 3, 4 }, { 4, 3, 2, 1 } };
+        assertEquals(-1,GossipingBusDrivers.getNumberStopsForSharingAllGosips(routes));
+    }
 }
